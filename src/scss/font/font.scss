@@ -65,3 +65,18 @@
 @mixin heading-semibold {
     font-family: "GCarturmDemo-SemiBold";
 }
+
+@mixin heading-30 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin font16 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@mixin font18 {
+    font-size: 18px;
+    line-height: 26px;
+}

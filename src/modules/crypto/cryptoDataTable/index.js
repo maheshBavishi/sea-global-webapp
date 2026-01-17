@@ -35,4 +35,4 @@ function CryptoDataTable() {
     );
 }
 
-export default CryptoDataTable;
+export default memo(CryptoDataTable);

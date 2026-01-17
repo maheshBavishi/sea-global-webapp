@@ -7,6 +7,10 @@
     padding: 55px 0 41px 0;
     position: relative;
 
+    @include respond-to("sm") {
+        padding: 60px 0 20px 0;
+    }
+
     &::before {
         position: absolute;
         bottom: 0;
@@ -22,6 +26,10 @@
     .textstyle {
         padding: 40px 0 0 0;
         position: relative;
+
+        @include respond-to("sm") {
+            padding: 30px 0 0 0;
+        }
 
         p {
             color: var(--Dark-Body, #747474);
@@ -47,9 +55,19 @@
             gap: 40px;
         }
 
+        @include respond-to("sm") {
+            gap: 20px;
+        }
+
         .footerMenu {
             display: flex;
             justify-content: space-between;
+
+            @include respond-to("sm") {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
 
             h3 {
                 color: #FFF;
@@ -59,6 +77,10 @@
                 line-height: 18px;
                 @include font-medium;
                 margin: 0 0 12px 0;
+
+                @include respond-to("sm") {
+                    @include font16;
+                }
             }
 
             p,
@@ -120,6 +142,10 @@
                 img {
                     display: block;
                     cursor: pointer;
+
+                    @include respond-to("sm") {
+                        max-width: 160px;
+                    }
                 }
             }
         }
@@ -133,6 +159,10 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 22.5px;
+
+                @include respond-to("sm") {
+                    @include font16;
+                }
             }
 
             p {

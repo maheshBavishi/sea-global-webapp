@@ -6,8 +6,16 @@
     padding: 110px 0;
     background: #F1F1F1;
 
+    @include respond-to("sm") {
+        padding: 60px 0 40px 0;
+    }
+
     .title {
         padding: 0 0 42px 0;
+
+        @include respond-to("sm") {
+            padding: 0 0 30px 0;
+        }
 
         h2 {
             font-size: 48px;
@@ -20,6 +28,10 @@
             -webkit-background-clip: text;
             text-align: center;
             -webkit-text-fill-color: transparent;
+
+            @include respond-to("sm") {
+                @include heading-30;
+            }
 
             span {
                 background: var(--Primary, linear-gradient(90deg, #E8BC33 10%, #B07A09 100%));
@@ -65,6 +77,10 @@
 
                     .spacing {
                         padding: 15px 0 0 0;
+
+                        @include respond-to("sm") {
+                            padding: 12px 0 0 0;
+                        }
 
                         p {
                             font-size: 16px;

@@ -48,11 +48,11 @@ export default function TrustedbyTraders() {
                 className="mySwiper"
                 breakpoints={{
                     320: {
-                        slidesPerView: 1.1,
+                        slidesPerView: 1.3,
                         spaceBetween: 20,
                     },
                     480: {
-                        slidesPerView: 1.1,
+                        slidesPerView: 1.3,
                         spaceBetween: 30,
                     },
                     640: {

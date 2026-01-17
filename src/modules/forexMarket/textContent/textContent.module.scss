@@ -5,10 +5,18 @@
 .textContent {
     padding: 100px 0;
 
+    @include respond-to("sm") {
+        padding: 60px 0 100px 0;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0px;
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+        }
 
         .items:last-child {
             border: none;
@@ -17,6 +25,12 @@
         .items {
             padding: 20px 20px 30px 20px;
             border-right: 1px solid #CDCDCD;
+
+            @include respond-to("sm") {
+                border-right: none;
+                border-bottom: 1px solid #CDCDCD;
+                padding: 24px 0;
+            }
 
             h3 {
                 font-family: "GC arturm Demo";
@@ -31,6 +45,10 @@
                 margin: 0 0 8px 0;
                 @include heading-semibold;
                 text-align: center;
+
+                @include respond-to("sm") {
+                    font-size: 20px;
+                }
             }
 
             p {
@@ -41,6 +59,10 @@
                 font-weight: 400;
                 line-height: 105%;
                 @include font-normal;
+
+                @include respond-to("sm") {
+                    @include font16;
+                }
             }
 
             ul {
@@ -54,6 +76,10 @@
                     font-weight: 400;
                     line-height: 105%;
                     @include font-normal;
+
+                    @include respond-to("sm") {
+                        @include font16;
+                    }
                 }
             }
 

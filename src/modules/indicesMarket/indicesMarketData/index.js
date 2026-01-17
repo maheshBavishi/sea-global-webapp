@@ -77,4 +77,4 @@ function IndicesMarketData() {
   );
 }
 
-export default IndicesMarketData;
+export default memo(IndicesMarketData);

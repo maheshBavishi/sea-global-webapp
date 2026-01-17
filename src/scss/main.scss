@@ -9,15 +9,31 @@
     background-position: bottom;
     background-size: cover;
 
+    @include respond-to("md") {
+        height: auto;
+        padding: 120px 0 0 0;
+    }
+
     .left-alignment {
         padding-left: max(20px, (100vw - 1340px) / 2);
         padding-right: 80px;
+
+        @include respond-to("md") {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr 580px;
             gap: 20px;
             height: 100dvh;
+
+            @include respond-to("md") {
+                height: auto;
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
 
             .grid-items:first-child {
                 display: flex;
@@ -35,6 +51,14 @@
                     img {
                         display: block;
                         width: 100%;
+
+                        @include respond-to("md") {
+                            max-width: 60%;
+                        }
+
+                        @include respond-to("sm") {
+                            max-width: 100%;
+                        }
                     }
                 }
 
@@ -47,12 +71,20 @@
                     max-width: 714px;
                     margin: 0 0 20px 0;
                     @include font-normal;
+
+                    @include respond-to("sm") {
+                        @include font16;
+                    }
                 }
 
                 .two-button-alignment {
                     display: flex;
                     align-items: center;
                     gap: 16px;
+
+                    @include respond-to("sm") {
+                        justify-content: center;
+                    }
 
                     button {
                         border: none;
@@ -68,6 +100,16 @@
                         font-weight: 600;
                         line-height: normal;
                         @include font-semibold;
+
+                        @include respond-to("sm") {
+                            font-size: 14px;
+                        }
+
+                        img {
+                            @include respond-to("sm") {
+                                max-width: 35px;
+                            }
+                        }
 
                         &.orange {
                             background: var(--Primary, linear-gradient(90deg, #E8BC33 10%, #B07A09 100%));
@@ -91,6 +133,10 @@
                     margin: 0 0 20px 0;
                     -webkit-text-fill-color: transparent;
                     @include heading-semibold;
+
+                    @include respond-to("sm") {
+                        @include heading-30;
+                    }
 
                     &.full-width {
                         max-width: 720px;

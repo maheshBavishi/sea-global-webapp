@@ -35,4 +35,4 @@ function TradingViewWidget() {
     );
 }
 
-export default TradingViewWidget;
+export default memo(TradingViewWidget);

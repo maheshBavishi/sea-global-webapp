@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import styles from './educationSection.module.scss';
+import Marquee from 'react-fast-marquee';
 
 const RotateArrow = '/assets/icons/rotate-arrow.svg';
 const MarketIcon = '/assets/icons/market.svg';
@@ -44,6 +45,30 @@ export default function EducationSection() {
                             Enhance your trading knowledge and decision-making with our education hub and professional trading
                             tools, designed to support traders at every stage of their journey.
                         </p>
+                    </div>
+                    <div className={styles.mobileShow}>
+                        <Marquee>
+                            <div className={styles.allbox}>
+                                {[...Array(20)].map((_, i) => (
+                                    <motion.div
+                                        className={styles.box}
+                                        key={i}
+                                        whileHover={{ scale: 1.03 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <h3>Know Your Markets</h3>
+
+                                        <div className={styles.icon}>
+                                            <img src={RotateArrow} alt="RotateArrow" />
+                                        </div>
+
+                                        <div className={styles.bottomIcon}>
+                                            <img src={MarketIcon} alt="MarketIcon" />
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </Marquee>
                     </div>
                 </div>
 

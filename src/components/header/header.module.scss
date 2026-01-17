@@ -19,10 +19,42 @@
         align-items: center;
         justify-content: space-between;
 
+        .mobileMenu {
+            display: none;
+
+            @include respond-to("md") {
+                display: block;
+            }
+
+            svg {
+                width: 26px;
+                height: 26px;
+
+                @include respond-to("sm") {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                path {
+                    fill: #141414;
+                }
+            }
+        }
+
         .menu {
             display: flex;
             align-items: center;
             gap: 24px;
+
+            .menuItems {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                @include respond-to("md") {
+                    display: none;
+                }
+            }
 
             a {
                 color: #353535;
@@ -46,6 +78,12 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                }
+            }
+
+            .button {
+                @include respond-to("sm") {
+                    display: none;
                 }
             }
 
@@ -90,6 +128,10 @@
             img {
                 display: block;
                 cursor: pointer;
+
+                @include respond-to("sm") {
+                    max-width: 160px;
+                }
             }
         }
     }

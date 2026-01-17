@@ -6,6 +6,10 @@
     padding: 120px 0;
     position: relative;
 
+    @include respond-to("sm") {
+        padding: 100px 0 60px 0;
+    }
+
     h2 {
         max-width: 423px;
         margin: 0 auto;
@@ -20,6 +24,10 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include respond-to("sm") {
+            @include heading-30;
+        }
 
         span {
             background: var(--Primary, linear-gradient(90deg, #E8BC33 10%, #B07A09 100%));
@@ -38,6 +46,11 @@
         font-weight: 400;
         line-height: 17px;
         max-width: 600px;
+
+        @include respond-to("sm") {
+            @include font16;
+            margin: 20px 0;
+        }
     }
 
     .iconTextAlignment {
@@ -45,6 +58,25 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
+
+        @include respond-to("sm") {
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        img {
+            @include respond-to("sm") {
+                display: block;
+                max-width: 40px;
+            }
+        }
+
+        .iconCenter {
+            @include respond-to("sm") {
+                display: flex;
+                justify-content: center;
+            }
+        }
 
         span {
             display: block;
@@ -56,6 +88,11 @@
             line-height: 105%;
             @include font-medium;
             padding: 16px 0 0 0;
+
+            @include respond-to("sm") {
+                font-size: 14px;
+                padding: 10px 0 0 0;
+            }
         }
     }
 
@@ -63,6 +100,10 @@
         position: absolute;
         top: 15%;
         left: 0;
+
+        @include respond-to("sm") {
+            top: 5%;
+        }
 
         img {
             max-width: 350px;
@@ -80,6 +121,10 @@
         left: 4%;
         z-index: 9;
 
+        @include respond-to("sm") {
+            display: none;
+        }
+
         img {
             max-width: 420px;
             display: block;
@@ -95,6 +140,10 @@
         top: -12%;
         right: 0;
 
+        @include respond-to("sm") {
+            top: -6%;
+        }
+
         img {
             display: block;
             max-width: 480px;
@@ -105,6 +154,10 @@
 
             @include respond-to("md") {
                 max-width: 220px;
+            }
+
+            @include respond-to("sm") {
+                max-width: 140px;
             }
         }
     }

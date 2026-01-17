@@ -6,8 +6,16 @@
     background-color: #F1F1F1;
     padding: 110px 0;
 
+    @include respond-to("sm") {
+        padding: 60px 0;
+    }
+
     .title {
         padding: 0 0 130px 0;
+
+        @include respond-to("sm") {
+            padding: 0 0 30px 0;
+        }
 
         h2 {
             font-size: 48px;
@@ -21,6 +29,10 @@
             text-align: center;
             -webkit-text-fill-color: transparent;
             margin: 0 0 8px 0;
+
+            @include respond-to("sm") {
+                @include heading-30;
+            }
 
             span {
                 background: var(--Primary, linear-gradient(90deg, #E8BC33 10%, #B07A09 100%));
@@ -40,6 +52,10 @@
             @include font-normal;
             max-width: 903px;
             margin: 0 auto;
+
+            @include respond-to("sm") {
+                @include font16;
+            }
         }
     }
 
@@ -52,6 +68,12 @@
         @include respond-to("md") {
             grid-template-columns: repeat(2, 1fr);
             gap: 60px 24px;
+        }
+
+        @include respond-to("sm") {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 0 0 60px 0;
         }
 
         .griditems:nth-child(2) {
@@ -93,6 +115,12 @@
                         top: 55%;
                         left: 0;
                         transform: translateY(-50%);
+
+                        svg {
+                            @include respond-to("sm") {
+                                max-width: 130px;
+                            }
+                        }
                     }
 
                     .right {
@@ -100,6 +128,12 @@
                         top: 55%;
                         right: 0;
                         transform: translateY(-50%);
+
+                        svg {
+                            @include respond-to("sm") {
+                                max-width: 130px;
+                            }
+                        }
                     }
 
                     button {
@@ -124,8 +158,16 @@
                 .contnet {
                     padding: 20px 32px;
 
+                    @include respond-to("sm") {
+                        padding: 20px 16px;
+                    }
+
                     .allTextStyle {
                         padding: 24px 0 0 0;
+
+                        @include respond-to("sm") {
+                            padding: 16px 0 0 0;
+                        }
 
                         .text {
                             display: flex;
@@ -134,6 +176,10 @@
                             position: relative;
                             padding: 0 0 20px 0;
 
+                            @include respond-to("sm") {
+                                padding: 0 0 16px 0;
+                            }
+
                             p {
                                 color: var(--Dark-Body, #747474);
                                 font-size: 20px;
@@ -141,6 +187,10 @@
                                 font-weight: 400;
                                 line-height: 105%;
                                 @include font-normal;
+
+                                @include respond-to("sm") {
+                                    @include font18;
+                                }
                             }
 
                             span {
@@ -152,6 +202,10 @@
                                 font-weight: 600;
                                 line-height: 105%;
                                 @include font-semibold;
+
+                                @include respond-to("sm") {
+                                    @include font16;
+                                }
                             }
                         }
                     }
@@ -195,6 +249,10 @@
                     padding: 24px;
                     border-radius: 24px 24px 0 0;
 
+                    @include respond-to("sm") {
+                        padding: 16px;
+                    }
+
                     h3 {
                         color: #FFF;
                         font-size: 24px;
@@ -203,6 +261,10 @@
                         line-height: 105%;
                         @include heading-semibold;
                         text-align: center;
+
+                        @include respond-to("sm") {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
